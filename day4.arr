@@ -28,6 +28,6 @@ layer6= rectangle(40,20,"solid",flavour3)
 
 three_layer_cake=above(above(layer4,layer5),layer6)
 
-fun three_layer_cake(flavour1,flavour2,flavour3):
+fun three_layer_cake(flavour1,flavour2,flavour3 :: String)-> String:
  three_layer_cake=above(above(layer4,layer5),layer6)
  end
