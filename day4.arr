@@ -18,16 +18,28 @@ layer3= rectangle(40,20,"solid","brown")
 
 cake=above(above(layer1,layer2),layer3)
 
-# layer4= rectangle(40,20,"solid","red")
-# layer5= rectangle(40,20,"solid","blue")
-# layer6= rectangle(40,20,"solid","pink")
-# three_layer_cake=above(above(layer4,layer5),layer6)
-layer4=rectangle(40,20,"solid",flavour1)
-layer5= rectangle(40,20,"solid",flavour2)
-layer6= rectangle(40,20,"solid",flavour3)
 
-three_layer_cake=above(above(layer4,layer5),layer6)
+fun three-layer-cake(flavour1 :: String, flavour2 :: String, flavour3 :: String) -> Image:
+  l1 = rectangle(40,20,"solid",flavour1)
+  l2 = rectangle(40,20,"solid",flavour2)
+  l3 = rectangle(40,20,"solid",flavour3)
+   above(above(l1, l2), l3) 
+end
+# fun three-layer-cake(flavour1, flavour2, flavour3):
+#   l1 = rectangle(40,20,"solid",flavour1)
+#   l2 = rectangle(40,20,"solid",flavour2)
+#   l3 = rectangle(40,20,"solid",flavour3)
+#   above(above(l1, l2), l3)
+# end
 
-fun three_layer_cake(flavour1,flavour2,flavour3 :: String)-> String:
- three_layer_cake=above(above(layer4,layer5),layer6)
- end
+four_shirts= (4 * (5 + (0.10 * string-length("Go Team"))))
+
+seven_shirts= (7 * (5 + (0.10 * string-length("Hello world"))))
+
+
+fun tshirts_cost(x :: Number) -> Number:
+  (x * (5 + (0.10 * string-length("Hello world")))) 
+end
+
+
+  
