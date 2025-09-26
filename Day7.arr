@@ -5,6 +5,7 @@ use context dcic2024
 #   else: print(no)
 #   end
 # end
+
 include csv
 include data-source
 
@@ -36,3 +37,33 @@ end
     
     
 # list= https://data.london.gov.uk/download/facbc883-5383-4558-9018-fef410a43482/d02171f3-ffcc-49e8-8fea-63a965a4a5b4/MPS_MonthlyCrimeDashboard_TNOCrimeData.csv
+
+
+
+money_tracker=table: month :: String , expense :: Number
+  row:"jan",7000
+  row:"feb",10000
+  row:"mar",4000
+    end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
