@@ -23,12 +23,14 @@ end
 
 
 # when running
-#- high-shuttle-ridership = filter-with(shuttle,ode)
+#- high-shuttle-ridership =filter-with(shuttle,ode)
 # - filter-with(shuttle,ode)
 #- order-by(high-shuttle-ridership,"rider",true)
 #- order-by(high-shuttle-ridership,"rider",false)
 
-
+# when running-> 
+# filter-with(shuttle,lam(r): r["rider"] >= 1000 end)
+# this basically runs a function without having to write it before calling it. in a way a shortcut to do when running) 
 
 
 

@@ -27,7 +27,7 @@ where:
   add-raise(25) is 27
 end
 
-# when runnng for the first one its build-column(the table name ,then u give it a name to the new one,then add the function
+# when running for the first one its build-column(the table name ,then u give it a name to the new one,then add the function
       
 #       when running for the second one same idea but its transform-column(the table name, the column name u want to manipulate ,and then the func you made
 
