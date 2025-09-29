@@ -29,9 +29,6 @@ ldn-smt = load-table:
   month-yar :: String,
   month-yer :: String,
   moar :: String
-  source: csv-table-url("https://data.london.gov.uk/download/facbc883-5383-4558-9018-fef410a43482/d02171f3-ffcc-49e8-8fea-63a965a4a5b4/MPS_MonthlyCrimeDashboard_TNOCrimeData.csv", default-options)
-end
-
 
     
     
