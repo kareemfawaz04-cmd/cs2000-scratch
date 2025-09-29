@@ -1,5 +1,4 @@
 use context dcic2024
-
 include csv
 include data-source 
 # how do i know the librarys to use and what each one does
@@ -11,7 +10,6 @@ event-data= load-table: name, email, tickcount, discount, delivery, zip
   sanitize tickcount using num-sanitizer
   sanitize discount using string-sanitizer
 end
-
 
 
 # for missing data in columns cant we do column-transform?
@@ -41,5 +39,3 @@ end
 final-table=transform-column(event-data,"discount",norm-disc)
 
 # count(final-table,"discount")
-
-
