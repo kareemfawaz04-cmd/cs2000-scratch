@@ -1,5 +1,5 @@
 fun tip-amount(x :: Number, y :: Number) -> Number:
-  doc: "takes the amount given and calculates the tip amount which is 50%"
+  doc: "takes the amount given and calculates the tip amount%"
   
   if (x < 0) or (x > 100) or (y < 0) or (y > 100) :
     raise("Invalid input, try again")
