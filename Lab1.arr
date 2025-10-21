@@ -42,7 +42,7 @@ fun count-high-value(l :: List<Number>) -> Number block:
     if item > 25:
       above25 := above25 + 1
     else:
-      above25
+      false
     end
   end
   above25
