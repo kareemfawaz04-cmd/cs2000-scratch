@@ -14,7 +14,3 @@ fun vehicle-age(x :: Vehicle, current-year :: Number) -> Number:
   end
 end
 
-data Grade:
-  |letter
-  |percent
-  |pass-fail
