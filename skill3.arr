@@ -85,3 +85,58 @@ fun short-words-only(l :: List<String>) -> List<String> block:
 where:
   short-words-only([list: "123456", "123","12" ,"1234"]) is [list: "123","12"] 
 end
+
+
+
+
+
+# long-words-only
+# From a list of strings, keep only words longer than 4 letters.
+
+fun long-words-only(l :: List<String>)-> List<String> block:
+  var list-of-4 = [list:]
+  for each(word from l):
+    if string-length(word) > 4 :
+      list-of-4:= list-of-4 + [list:word]
+    else:
+      false
+    end
+  end
+  list-of-4
+where:
+  long-words-only([list: "qwerte", "123", "123 534", "123 45", "1"]) is [list:"qwerte","123 534", "123 45"]
+end
+
+
+
+# is-positive
+# Write a function that returns true if a number is positive, and false otherwise.
+
+fun is-pos(l :: List<Number>) -> List<Boolean> block:
+  var pos-numb = [list:]
+  for each(numb from l):
+    if numb > 0:
+      pos-numb:= pos-numb + [list:true]
+    else:
+    pos-numb:= pos-numb + [list:false]    
+    end
+  end
+  pos-numb
+where:
+  is-pos([list: -2,-1,0,1,]) is [list: false,false,false,true]
+end
+
+
+
+# Write a function square-all(lst) that returns a list where every number in lst is squared.
+
+
+fun square-all(l :: List<Number>) -> List<Number> block:
+  var square-L = [list:]
+  for each(numb from l):
+    square-L:= square-L + [list: numb * numb]
+  end
+  square-L
+where:
+  square-all([list:1,2,3,4,5,-5]) is [list: 1, 4, 9, 16, 25, 25]
+end
