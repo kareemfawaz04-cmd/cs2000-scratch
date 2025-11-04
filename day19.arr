@@ -73,4 +73,5 @@ where:
   grade-to-gpa(percent(59.8)) is 0.0
   grade-to-gpa(pass-fail(false)) is 0.0
   grade-to-gpa(pass-fail(true)) is 4.0
+
 end

@@ -48,3 +48,35 @@ where:
   is-popular(b3) is true
   is-popular(b4) is false
 end
+
+
+
+# Prompt:
+# Design a data definition for Show that can be either movie with title and duration (in minutes), or series with title and number of seasons.
+# Then, write a function is-long that returns true if the movie is longer than 120 minutes, or the series has at least 5 seasons.
+
+# Variation idea:
+# Add a third type later (like documentary with topic and rating), and update your is-long function.
+
+data show:
+  |movie(title :: String, duration :: Number)
+  |series(title:: String, seasons :: Number)
+end
+
+fun is-long(r :: show)->Boolean:
+  doc:"if the movie is more than 120 the output is true or if the series is longer than five seasons then true"
+  cases (show) r:
+    |movie(t,d) => d > 120
+    |series(t,s) => s >= 5
+  end
+where:
+  mov1= movie("maze runner",140)
+  mov2= movie("dare",110)
+  ser1= series("rick n morty" , 7)
+  ser2= series("got" , 4)
+      
+  is-long(mov1) is true
+  is-long(mov2) is false
+  is-long(ser1) is true
+  is-long(ser2) is false
+end

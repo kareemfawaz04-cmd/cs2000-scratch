@@ -140,3 +140,26 @@ fun square-all(l :: List<Number>) -> List<Number> block:
 where:
   square-all([list:1,2,3,4,5,-5]) is [list: 1, 4, 9, 16, 25, 25]
 end
+
+
+
+fun find-max-number(l :: List<Number>) -> List<Number> block:
+  doc: "Returns the largest number in the list using for each."
+  var num-L = [list:]
+  for each(numb from l):
+    if num-max(numb):
+      num-L := num-L + [list: numb]
+    else:
+      false
+    end
+  end
+  num-L
+where:
+  find-max-number([list: 1, 2, 3]) is [list: 3]
+  find-max-number([list: 10, 20, 30]) is [list: 30]
+  find-max-number([list: 100, 200, 300]) is [list: 300]
+end
+
+
+
+
