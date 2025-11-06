@@ -55,4 +55,24 @@ where:
 end
 
 
+# Problem 3
+# Design a function oldest-birth-year that finds the birth year of the oldest person in the tree (the person with the smallest birth year). If the tree is empty, return 2050 (a currently impossible birth year).
 
+fun oldest-birth-year(t :: AncTree) -> Number:
+  cases (AncTree) t:
+    | noInfo => 2050
+    | person(n, b, e, m, f) =>
+        num-min(
+          b,
+          num-min(oldest-birth-year(m), oldest-birth-year(f))
+        )
+  end
+where:
+  oldest-birth-year(noInfo) is 2050
+  oldest-birth-year(alice-tree) is 1922
+  oldest-birth-year(emily-tree) is 1922
+end
+
+
+# Problem 4
+# Design a function names-starting-with that returns a list of all names in the tree that start with a given letter (case-insensitive).

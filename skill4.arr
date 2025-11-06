@@ -80,3 +80,43 @@ where:
   is-long(ser1) is true
   is-long(ser2) is false
 end
+
+
+# Design a data definition for Job that can be either
+
+# engineer with salary,
+
+# teacher with experience, or
+
+# artist with portfolio-size.
+# Write a function is-stable that returns true if salary ≥ 80000, experience ≥ 5 years, or portfolio-size ≥ 15.
+
+data Job:
+  |engineer( salary :: Number)
+  |teacher( experience:: Number)
+  |artist( portfolio-size:: Number)
+end
+
+fun is-stable(j :: Job) -> Boolean:
+  cases (Job) j:
+    |engineer(s)=> s >= 80000
+    |teacher(e)=> e >= 5
+    |artist(ps)=> ps >= 15
+  end
+where:
+  eng1 = engineer(90000)
+  eng2 = engineer( 70000)
+  teach1 = teacher( 6)
+  teach2 = teacher( 4)
+  art1 = artist(20)
+  art2 = artist( 10 )
+  
+  is-stable(eng1) is true
+  is-stable(eng2) is false
+  is-stable(teach1) is true
+  is-stable(teach2) is false
+  is-stable(art1) is true
+  is-stable(art2) is false
+end
+
+  
