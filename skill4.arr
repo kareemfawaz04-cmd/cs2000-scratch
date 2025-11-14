@@ -120,3 +120,28 @@ where:
 end
 
   
+
+
+
+data Activity:
+  | course(name :: String, credits :: Number, instructor :: String)
+  | extracurricular(name :: String, typee :: String, timecommitted :: Number)
+end
+
+fun is-time-intensive(a :: Activity) -> Boolean:
+  doc: "Returns true if the course has 4 or more credits, or if the extracurricular takes 6 or more hours per week"
+  cases (Activity) a:
+    | course(n, c, i) => c >= 4
+    | extracurricular(n, t, tc) => tc >= 6
+  end
+where:
+  c1 = course("Kareem", 5, "Rush")
+  c2 = course("Alessya", 3, "Pat")
+  ex1 = extracurricular("Joe", "Football", 7)
+  ex2 = extracurricular("Carl", "Tennis", 4)
+
+  is-time-intensive(c1) is true
+  is-time-intensive(c2) is false
+  is-time-intensive(ex1) is true
+  is-time-intensive(ex2) is false
+end
