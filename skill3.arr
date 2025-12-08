@@ -146,8 +146,9 @@ end
 fun find-max-number(l :: List<Number>) -> List<Number> block:
   doc: "Returns the largest number in the list using for each."
   var num-L = [list:]
+  var num = 
   for each(numb from l):
-    if num-max(numb):
+      if num-max(numb,num):
       num-L := num-L + [list: numb]
     else:
       false
